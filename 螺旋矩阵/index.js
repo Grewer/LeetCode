@@ -2,7 +2,7 @@
  * @param {number[][]} matrix
  * @return {number[]}
  */
-
+// 解题思路:https://leetcode-cn.com/problems/spiral-matrix/solution/luo-xuan-ju-zhen-by-leetcode-solution/
 // 0,0 0
 // 0,1 1
 // 0,2 2
@@ -26,30 +26,30 @@ var spiralOrder = function (matrix) {
                 arr.push(matrix[top][i])
                 total--
             }
-            top++
+
 
             for (var i = top; i <= bottom && total >= 1; i++) {
                 arr.push(matrix[i][right])
                 total--
             }
 
-            right--
 
             for (var i = right; i >= left && total >= 1; i--) {
                 arr.push(matrix[bottom][i])
                 total--
             }
 
-            bottom--
-
             for (var i = bottom; i >= top && total >= 1; i--) {
                 arr.push(matrix[i][left])
                 total--
             }
 
+            top++
             left++
-
+            right--
+            bottom--
 
         }
         return arr
     };
+
