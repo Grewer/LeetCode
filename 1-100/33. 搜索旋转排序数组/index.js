@@ -16,6 +16,7 @@ var search = function (nums, target) {
             // 中间的数小于最右边的数
 
             if (nums[mid] < target && target <= nums[r]) {
+                // // 如果目标值在 右边的区间
                 l = mid + 1
             } else {
                 r = mid - 1
