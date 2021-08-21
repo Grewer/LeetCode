@@ -23,7 +23,7 @@ var mergeTwoLists = function (l1, l2) {
             temp.next = l1
             temp = temp.next
             l1 = l1.next
-            console.log(temp, l1, result)
+            // console.log(temp, l1, result)
         } else {
             temp.next = l2
             temp = temp.next
